@@ -146,3 +146,58 @@ WHERE table_name = 'demanda_horas_zona_q1';
 SELECT partition_id, total_rows
 FROM `semi2-proyecto-g12.fase1.INFORMATION_SCHEMA.PARTITIONS`
 WHERE table_name = 'demanda_horas_zona_q1';
+
+
+
+-- Verificacion de las particiones
+SELECT COUNT(trip_distance) AS filas_q1
+FROM semi2-proyecto-g12.fase1.taxi_trips_copia
+WHERE DATE(pickup_datetime) BETWEEN '2022-01-01' AND '2022-03-31';
+
+
+-- Verificacion del clustering
+SELECT COUNT(trip_distance) AS viajes_zona237_febrero
+FROM semi2-proyecto-g12.fase1.taxi_trips_copia
+WHERE DATE(pickup_datetime) BETWEEN '2022-02-01' AND '2022-02-28'
+  AND pickup_location_id = '237';
+
+SELECT COUNT(trip_distance) AS viajes_cash_febrero
+FROM semi2-proyecto-g12.fase1.taxi_trips_copia
+WHERE DATE(pickup_datetime) BETWEEN '2022-02-01' AND '2022-02-28'
+  AND payment_type = '2';
+
+
+-- Consultas para generar dashboard
+SELECT pickup_location_id, COUNT(*) AS viajes
+FROM semi2-proyecto-g12.fase1.taxi_trips_copia
+GROUP BY pickup_location_id
+ORDER BY viajes DESC
+LIMIT 10;
+
+SELECT month_date, SUM(trips) AS total_viajes
+FROM semi2-proyecto-g12.fase1.metrica_mensual_q1
+GROUP BY month_date
+ORDER BY month_date;
+
+SELECT hora_dia, SUM(viajes) AS total_viajes
+FROM semi2-proyecto-g12.fase1.demanda_horas_zona_q1
+WHERE fecha_viaje BETWEEN '2022-02-01' AND '2022-02-28'
+GROUP BY hora_dia
+ORDER BY hora_dia;
+
+SELECT payment_type, SUM(trips) AS total_viajes
+FROM semi2-proyecto-g12.fase1.metrica_mensual_q1
+GROUP BY payment_type
+ORDER BY total_viajes DESC;
+
+SELECT propinas, SUM(viajes) AS total_viajes
+FROM semi2-proyecto-g12.fase1.propinas_q1
+GROUP BY propinas
+ORDER BY total_viajes DESC;
+
+SELECT pickup_location_id, COUNT(*) AS total_viajes
+FROM semi2-proyecto-g12.fase1.taxi_trips_copia
+WHERE DATE(pickup_datetime) BETWEEN '2022-01-01' AND '2022-03-31'
+GROUP BY pickup_location_id
+ORDER BY total_viajes DESC
+LIMIT 10;
