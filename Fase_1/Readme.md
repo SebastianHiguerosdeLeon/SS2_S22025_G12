@@ -142,7 +142,7 @@ Se aplicaron técnicas de validación, limpieza, creación de tablas optimizadas
 📷 **Visualización top 10 zonas**  
 ![Top zonas](imagenes/6.png)
 
-👉 **[Enlace al Dashboard](imagenes/URL_DEL_DASHBOARD)**
+👉 **[Enlace al Dashboard](https://lookerstudio.google.com/reporting/734e63a3-7e75-422d-b99d-b185f9f2e7a1)**
 
 ---
 
