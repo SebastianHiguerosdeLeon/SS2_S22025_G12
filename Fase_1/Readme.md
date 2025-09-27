@@ -91,6 +91,38 @@ Se aplicaron técnicas de validación, limpieza, creación de tablas optimizadas
 📷 **Consulta relación distancia – tarifa – propina**  
 ![Relación distancia tarifa propina](imagenes/12.png)
 
+📷 **Consulta duracion promedio de los viajes**
+
+![Duracion Promedio de Viaje](imagenes/13.png)
+
+📷 **Consulta distribucion cantidad de pasajeros por viajes**
+
+![Distribucion cantidad pasajeros por viaje](imagenes/15.png)
+
+![Resultados cantidad pasajeros por viaje](imagenes/16.png)
+
+📷 **Consulta viajes por dia de la semana**
+
+![Viajes por dia de la semana](imagenes/17.png)
+
+📷 **Consulta Reduccion de bytes**
+
+![Sin optimizar](imagenes/18.png)
+
+![Optimizada](imagenes/23.png)
+
+📷 **Consulta Numero de viajes por cantidad de pasajeros**
+
+![Resultados numero viajes por cantidad pasajeros](imagenes/19.png)
+
+![numero viajes por cantidad pasajeros](imagenes/20.png)
+
+📷 **Consulta relacion distancia-tarifa-propina**
+
+![Resultados relacion distancia-tarfia-propina](imagenes/21.png)
+
+![relacion distancia-tarifa-propina](imagenes/22.png)
+
 ---
 
 ## 📊 Visualizaciones / Dashboard
