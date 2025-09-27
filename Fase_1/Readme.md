@@ -155,6 +155,38 @@ Se compararon consultas en el dataset original y en la tabla optimizada (`taxi_t
 
 ---
 
+📊 Visualizaciones del Dashboard
+
+👉 Viajes por Mes
+
+En esta vista se muestran los viajes totales por mes (enero, febrero y marzo 2022).
+
+Gráfico de barras: evidencia el crecimiento en el número de viajes, con marzo como el mes de mayor demanda.
+
+Gráfico circular: representa la distribución porcentual de los viajes por mes.
+
+Indicador numérico: presenta el total consolidado de viajes en el trimestre (8.4 millones).
+
+Línea temporal: muestra la evolución de la distancia promedio de viajes, donde se observa una disminución a finales de enero y un repunte en febrero.
+
+📷 **DASHBOARD**  
+![Optimización bytes](imagenes/dash1.png)
+
+👉 Propinas, Métodos de Pago y Demanda
+
+En esta segunda vista se analizan variables categóricas y de comportamiento:
+
+Gráfico de barras de propinas: compara la cantidad de viajes según rangos de propina (sin propina, hasta 2 USD, 2–5 USD, 5–10 USD, más de 10 USD).
+
+Gráfico circular de % de propinas por viajes: permite visualizar la proporción de cada rango de propina frente al total de viajes.
+
+Gráfico circular de métodos de pago: muestra la distribución entre tarjeta de crédito y efectivo como los medios más utilizados, con pequeñas participaciones de otras categorías (sin cargo, disputa, otro).
+
+Gráfico de línea + barras de demanda por hora del día: refleja cómo la cantidad de viajes se concentra principalmente en las horas de la mañana y noche, disminuyendo durante la madrugada.
+
+📷 **DASHBOARD**  
+![Optimización bytes](imagenes/dash2.png)
+
 ## 📜 Conclusiones
 - Se comprobó la importancia de usar **particiones y clustering** para reducir costos y tiempos de consulta.  
 - Se identificaron **patrones temporales** (por mes, hora, día de la semana).  
